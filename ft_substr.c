@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:55:07 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:48:10 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 20:27:48 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,46 +15,45 @@
 #include <stdio.h>
 #include "libft.h"
 
-static char *ft_strncpy(char *dest, const char *src, size_t dsize) //copia src de tamaño dsize en dest
+static char	*ft_strncpy(char *dest, const char *src, size_t dsize)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (i < dsize && src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    while(i < dsize)
-    {
-        dest[i] = '\0';
-        i++;
-    }
-    return (dest);
+	i = 0;
+	while (i < dsize && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < dsize)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len) //Reserva  y devuelve una substring. La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’.
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *subs;
-    size_t slen;
-    size_t sublen;
+	char	*subs;
+	size_t	slen;
+	size_t	sublen;
 
-    slen = ft_strlen(s);
-    if (s == NULL) 
-        return (NULL);
-    if (subs == NULL)
-        return (NULL);
-    if (start >= slen)
-        return ("");
-    if (len > slen - start) //si cuanto queremos copiar es mayor de lo que podemos
-        sublen = slen - start;
-    else
-        sublen = len;
-    
-    subs = (char *)malloc(sublen + 1);
-    ft_strncpy(subs, &s[start], sublen);
-    subs[sublen] = '\0';
-    return (subs); 
+	slen = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	if (subs == NULL)
+		return (NULL);
+	if (start >= slen)
+		return ("");
+	if (len > slen - start)
+		sublen = slen - start;
+	else
+		sublen = len;
+	subs = (char *)malloc(sublen + 1);
+	ft_strncpy(subs, &s[start], sublen);
+	subs[sublen] = '\0';
+	return (subs);
 }
 /*
 int main ()
