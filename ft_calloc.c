@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:39:24 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:43:06 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 20:04:30 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include <stdlib.h>
 #include "libft.h"
 
- void *ft_calloc(size_t nmemb, size_t size)
- {
-    void *ptr = malloc(nmemb * size);
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*ptr;
 
-    if (ptr == NULL)
-        return (NULL);
-    
-    ft_memset (ptr, 0, nmemb * size);
-        return ptr;
- } 
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memset (ptr, 0, nmemb * size);
+	return (ptr);
+}
 /*
  int main (void)
 {

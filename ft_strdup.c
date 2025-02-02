@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:32:57 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:44:45 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 20:23:35 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,17 @@
 #include <stdio.h>
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    
-    size_t len = ft_strlen(s) + 1; // Incluye el carácter nulo.
+	size_t	len;
+	char	*dest;
 
-    char *dest = (char *)malloc(len);
-    
-    if (dest == NULL) 
-        return NULL; // Manejo de error en caso de fallo de malloc
-        
-    ft_memcpy(dest, s, len); // Copia la cadena incluyendo el carácter nulo
-    return dest;
+	dest = (char *)malloc(len);
+	len = ft_strlen(s) + 1;
+	if (dest == NULL)
+		return (NULL);
+	ft_memcpy(dest, s, len);
+	return (dest);
 }
 /*
 int main(void) 

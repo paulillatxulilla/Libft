@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:58:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:47:06 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 20:20:33 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 #include <stdio.h>
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-     if (*little == '\0')
-        return (char *)big;
-    
-    size_t litlen = ft_strlen(little);
+	size_t	litlen;
+	size_t	i;
 
-    if (litlen > len)
-      return NULL;
-
-    size_t i = 0;
-
-    while (i <= len - litlen)
-    {
-        i++;
-        if(big[i] == little[0])
-            if (ft_strncmp (&big[i], little, litlen) == 0)
-                return (char *)&big[i];
-    }
-
-    return NULL;
+	i = 0;
+	litlen = ft_strlen(little);
+	if (*little == '\0')
+		return ((char *)big);
+	if (litlen > len)
+		return (NULL);
+	while (i <= len - litlen)
+	{
+		i++;
+		if (big[i] == little[0])
+			if (ft_strncmp (&big[i], little, litlen) == 0)
+				return ((char *)&big[i]);
+	}
+	return (NULL);
 }
 /*
 int main ()
