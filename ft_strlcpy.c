@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:36:33 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:46:36 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
     }
 
     // Devuelve la longitud de la cadena src
-    return strlen(src);
+    return ft_strlen(src);
 }
 /*
 int main(void)

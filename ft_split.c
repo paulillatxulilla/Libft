@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:39:43 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:44:17 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char *allocate_word(const char *s, int start, int len)
     char *word = malloc(len + 1);
     if (!word)
         return NULL;
-    strncpy(word, s + start, len);
+    ft_strlcpy(word, s + start, len);
     word[len] = '\0';
     return word;
 }

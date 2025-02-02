@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:39:24 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:34:41 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:43:06 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
     if (ptr == NULL)
         return (NULL);
     
-    memset (ptr, 0, nmemb * size);
+    ft_memset (ptr, 0, nmemb * size);
         return ptr;
  } 
 /*
