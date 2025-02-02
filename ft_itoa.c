@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:16:55 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 21:06:53 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 21:32:27 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static int count_digits(int n)
 {
@@ -20,7 +21,11 @@ static int count_digits(int n)
     if (n == 0) 
         len = 1;  // Si n es 0, tiene un dígito
     else if (n < 0) 
-        len = 1;  // Si es negativo, contamos el signo
+		{
+			len = 1;
+			n = -n;
+			
+		}
 
     while (n > 0)
     {
@@ -34,8 +39,11 @@ static void fill_str(char *str, int n, int len)
 {
     if (n == 0)
         str[0] = '0';
-    else if (n < 0)
+    if (n < 0)
+	{
         str[0] = '-';
+		n = -n;
+	}
     
     while (n > 0)
     {
@@ -58,10 +66,10 @@ char *ft_itoa(int n)
     
     return str;
 }
-/*
+
 int main()
 {
-    int number = 0;  
+    int number = -123;  
     char *result = ft_itoa(number);
 
     if (result != NULL) 
@@ -72,4 +80,4 @@ int main()
     else 
         printf("Error al asignar memoria.\n");
     return 0;
-}*/
+}
