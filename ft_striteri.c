@@ -6,13 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:51:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 18:55:34 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:39:20 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -30,7 +31,7 @@ void to_upper(unsigned int index, char *c) {
         *c = *c - ('a' - 'A');
     }
 }
-
+/*
 int main() {
     char str[] = "hello, world!";
     printf("Original: %s\n", str);
@@ -39,4 +40,4 @@ int main() {
 
     printf("Modificado: %s\n", str);
     return 0;
-}
+}*/

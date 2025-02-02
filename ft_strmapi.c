@@ -6,13 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 17:32:11 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 17:56:46 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:36:40 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

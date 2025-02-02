@@ -6,11 +6,12 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:50:11 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 18:50:22 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:40:12 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void ft_putchar_fd(char c, int fd) //envía el número ‘n’ al file descriptor dado
 {
@@ -39,6 +40,7 @@ void ft_putnbr_fd(int n, int fd)
         ft_putchar_fd(n + '0', fd);
     }
 }
+/*
 #include <fcntl.h>  // para open()
 
 int main()
@@ -49,4 +51,4 @@ int main()
     ft_putnbr_fd(-12345, fd);
     close(fd);
     return (0);
-}
+}*/

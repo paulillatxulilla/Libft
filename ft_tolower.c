@@ -6,12 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 17:38:44 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 16:06:39 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:37:06 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include<stdio.h>
+#include "libft.h"
+
 int ft_tolower(int c)
 {
     if (c >= 'A' && c <= 'Z')

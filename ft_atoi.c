@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:10:09 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 17:25:22 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:33:50 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
+#include "libft.h"
 
 int	ft_atoi(const char	*str)
 {

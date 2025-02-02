@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:58:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 16:06:21 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:36:48 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {

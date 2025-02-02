@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 16:05:38 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:36:33 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include<stdio.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {

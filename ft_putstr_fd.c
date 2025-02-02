@@ -6,11 +6,12 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:51:05 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 18:51:15 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:39:50 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void ft_putstr_fd(char *s, int fd)
 {
@@ -22,7 +23,7 @@ void ft_putstr_fd(char *s, int fd)
         s++;
     }
 }
-
+/*
 #include <fcntl.h> // Para abrir archivos (si es necesario)
 int main()
 {
@@ -32,4 +33,4 @@ int main()
     ft_putstr_fd("Hola, mundo!", fd); // Escribe la cadena en el archivo
     close(fd); // Cierra el archivo
     return 0;
-}
+}*/

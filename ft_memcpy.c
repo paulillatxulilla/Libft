@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 17:00:38 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:35:29 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

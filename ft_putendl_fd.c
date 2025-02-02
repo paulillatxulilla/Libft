@@ -6,11 +6,12 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:50:39 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 18:50:45 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:40:21 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void ft_putendl_fd(char *s, int fd) //envía la string ‘s’ a un file descriptor seguido de un salto de línea 
 {
@@ -23,7 +24,7 @@ void ft_putendl_fd(char *s, int fd) //envía la string ‘s’ a un file descrip
     }
     write(fd, "\n", 1);
 }
-
+/*
 #include <fcntl.h> // para abrir archivos (si es necesario)
 int main()
 {
@@ -33,4 +34,4 @@ int main()
     ft_putendl_fd("Hola, mundo!", fd);
     close(fd);
     return 0;
-}
+}*/

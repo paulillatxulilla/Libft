@@ -6,12 +6,13 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 13:31:51 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/27 16:06:09 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:36:44 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
   {

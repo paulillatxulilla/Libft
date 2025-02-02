@@ -6,25 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 17:55:05 by padan-pe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cpoza-ra <cpoza-ra@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/02 15:31:26 by cpoza-ra          #+#    #+#             */
-/*   Updated: 2025/02/02 17:53:00 by cpoza-ra         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:39:43 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 int count_words(const char *s, char c)
 {
@@ -85,7 +74,7 @@ char **ft_split(const char *s, char c)
     result[idx] = NULL;
     return result;
 }
-
+/*
 int main()
 {
     char **result = ft_split("hola,cara,cola", ',');
@@ -101,4 +90,4 @@ int main()
     }
     free(result);  // Se libera el array de punteros
     return 0;
-}
+}*/

@@ -6,13 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 12:41:18 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/31 13:13:17 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:39:11 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2) //reserva y devuelve una s3 con las dos concactenadas
 {
@@ -32,7 +33,7 @@ char *ft_strjoin(char const *s1, char const *s2) //reserva y devuelve una s3 con
 
     return (s3);
 }
-
+/*
 int main() 
 {
     char *s1 = "Hola, ";
@@ -50,3 +51,4 @@ int main()
     
     return 0;
 }
+*/

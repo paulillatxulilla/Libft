@@ -6,13 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:55:07 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/31 17:39:34 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:38:37 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len) //Reserva  y devuelve una substring. La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’.
 {
@@ -37,7 +38,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len) //Reserva  y devu
     subs[sublen] = '\0';
     return (subs); 
 }
-
+/*
 int main ()
 {
     char *s = "Hola, mundo!";
@@ -53,4 +54,4 @@ int main ()
         printf("Error al crear la subcadena\n");
     return 0;
 
-}
+}*/

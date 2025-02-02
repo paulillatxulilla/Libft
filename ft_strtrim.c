@@ -6,13 +6,14 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 16:17:17 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 16:34:35 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 19:38:52 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 static int ft_isinset(char c, const char *set) //verifica que un char está en set, es static int pq solo tiene alcance dentro de este archivo
 {   
@@ -66,7 +67,7 @@ char *ft_strtrim(char const *s1, char const *set) //elimina los caracteres de se
     result[end - start] = '\0'; //nulo al final
     return result;
 }
-
+/*
 int main()
 {
     char const *s1 = "???caracola_-_";
@@ -83,5 +84,5 @@ int main()
     printf("error al reservar memoria");
 
     return(0);
-}
+}*/
 
