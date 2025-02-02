@@ -6,41 +6,56 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:16:55 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:42:16 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/02 21:06:53 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
+
+static int count_digits(int n)
+{
+    int len = 0;
+
+    if (n == 0) 
+        len = 1;  // Si n es 0, tiene un dígito
+    else if (n < 0) 
+        len = 1;  // Si es negativo, contamos el signo
+
+    while (n > 0)
+    {
+        n /= 10;
+        len++;
+    }
+    return len;
+}
+
+static void fill_str(char *str, int n, int len)
+{
+    if (n == 0)
+        str[0] = '0';
+    else if (n < 0)
+        str[0] = '-';
+    
+    while (n > 0)
+    {
+        str[--len] = (n % 10) + '0';
+        n = n/10;
+    }
+}
 
 char *ft_itoa(int n)
 {
     char *str;
-    int	len = 1;//empieza en 1 porque se cuent aidvidiendo entre 10 y va a haber 1 que no cuente
-    int nn = n; //preservar el valor original
-    int temp;
-    if (n < 0){//si es negativo
-        nn = -n;// hacer valor absoluto
-        len++;//que guarde un espacio para el -
-    }
-    temp = nn;//declarar aqui para evitar errores con el signo y trabajar con el valor abs
-    while (temp >= 10){//contador de caracteres
-        temp = temp / 10;//123 / 10 = 12, 3 -> un caracter contado
-        len++;//va haciendo hueco a los caract contados
-    }
+    int len = count_digits(n);
+    
     str = (char *)malloc(len + 1);
-    if (str == NULL)
-        return NULL;   
-    str[len] = '\0';//que el ultimo int de la cadenas sea nulo
-    if(n < 0)
-        str[0] = '-';    
-    if (n == 0)
-        str[0] = '0';//si pasamos solo un 0 que nos ponga el 0 en ascii y tirando    
-    while (nn > 0) {//cuando es valor absoluto aka positivo 
-        str[--len] = (nn % 10) + '0'; // nos quedamos con el resto, 123 / 10, coge el 3 y le suma '0' (sumar 48 en ascii)
-        nn = nn / 10;//quit EL ULTIMO DIGITO para dividir sin ese
-    }
+    if (!str)
+        return NULL;
+    
+    fill_str(str, n, len);
+    str[len] = '\0';
+    
     return str;
 }
 /*
