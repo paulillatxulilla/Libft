@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:55:07 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/29 18:25:42 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:39:34 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,41 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len) //Reserva  y devuelve una substring. La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’.
 {
- //es un puntero a una parte de la src
- malloc(3);
-//char original[] = "Hola Mundo";
-    //char *subcadena = &original[5];  
+    char *subs;
+    size_t slen;
+    size_t sublen;
+
+    slen = strlen(s);
+    if (s == NULL) 
+        return (NULL);
+    if (subs == NULL)
+        return (NULL);
+    if (start >= slen)
+        return ("");
+    if (len > slen - start) //si cuanto queremos copiar es mayor de lo que podemos
+        sublen = slen - start;
+    else
+        sublen = len;
+    
+    subs = (char *)malloc(sublen + 1);
+    strncpy(subs, &s[start], sublen);
+    subs[sublen] = '\0';
+    return (subs); 
+}
+
+int main ()
+{
+    char *s = "Hola, mundo!";
+    char *func;
+
+    func = ft_substr(s, 7, 5);
+    if (func != NULL) 
+    {
+        printf("Subcadena: %s\n", func);
+        free(func);
+    } 
+    else
+        printf("Error al crear la subcadena\n");
+    return 0;
+
 }

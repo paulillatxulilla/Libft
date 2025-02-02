@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/01/31 17:39:33 by padan-pe         ###   ########.fr       */
+/*   Created: 2025/02/02 18:49:36 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/02/02 18:49:44 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h> // para abrir archivos (si es necesario)
 
-void	*ft_memset(void *s, int c, size_t n)
+void ft_putchar_fd(char c, int fd)
 {
-	size_t			i;
-	unsigned char	*ptr;
-
-	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
-	{
-		ptr[i] = (unsigned char) c;
-		i++;
-	}
-	return (s);
+    write(fd, &c, 1);
 }
-/*
-int main(void)
+int main()
 {
-    char arr[10] = "abcdefghi";
-    ft_memset(arr, 'x', 5);
-    printf("Array después de memset: %s\n", arr);
-    return(0);
-}*/
+    int fd = open("output.txt", O_WRONLY | O_CREAT, 0644); // abrir archivo para escribir
+    if(fd == -1) // Error al abrir el archivo
+        return 1;
+      ft_putchar_fd('A', fd); // escribe 'A' en el archivo
+
+    close(fd); // cierra el archivo
+    return 0;
+}
