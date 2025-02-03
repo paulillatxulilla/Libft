@@ -6,25 +6,25 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:51:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:45:09 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:44:47 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    if (s == NULL || f == NULL) {
-        return;
-    }
-    unsigned int i = 0;
-        while (s[i] != '\0') {
-            f(i, &s[i]);
-            i++;
-        }
+	unsigned int	i;
+
+	i = 0;
+	if (s == NULL || f == NULL)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 /*
 void to_upper(unsigned int index, char *c) {

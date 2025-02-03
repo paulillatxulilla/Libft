@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 21:22:49 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:35:13 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,21 +48,17 @@ char	*allocate_word(const char *s, int start, int len)
 	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+char	**process_words(const char *s, char c, char **result)
 {
-	char	**result;
-	int		i;
-	int		start;
-	int		idx;
-	int		in_word;
+	int	i;
+	int	start;
+	int	idx;
+	int	in_word;
 
 	i = 0;
 	start = 0;
 	idx = 0;
 	in_word = 0;
-	result = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c && !in_word)
@@ -79,6 +75,16 @@ char	**ft_split(const char *s, char c)
 	}
 	result[idx] = NULL;
 	return (result);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**result;
+
+	result = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (process_words(s, c, result));
 }
 /*
 int main()

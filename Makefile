@@ -6,7 +6,7 @@
 #    By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/02 20:28:44 by padan-pe          #+#    #+#              #
-#    Updated: 2025/02/02 20:28:50 by padan-pe         ###   ########.fr        #
+#    Updated: 2025/02/03 16:42:41 by padan-pe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJ_FILES = $(SRC_FILES:%.c:%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
-ar rcs $(NAME) $(OBJ_FILES) #para evitar relink, solo hace cambios en la lib si algun archivo .o ha cambiado
+	ar rcs $(NAME) $(OBJ_FILES) #para evitar relink, solo hace cambios en la lib si algun archivo .o ha cambiado
 
 	$(CC) $(CC_FLAGS) $(SRC_FILES) -o $(NAME)
 
