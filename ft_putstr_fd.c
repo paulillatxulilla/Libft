@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:51:05 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 16:11:02 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/03 17:36:14 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == NULL)
-		return (NULL);
+		return ;
 	while (*s)
 	{
 		write(fd, s, 1);

@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:55:07 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 20:27:48 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/03 17:43:24 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	slen;
 	size_t	sublen;
 
+	subs = 0;
 	slen = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
