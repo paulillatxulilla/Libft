@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:10:09 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:33:50 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:17:48 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_atoi(const char	*str)
 
 	sign = 1;
 	result = 0;
-	while (*str == ' ')
+	if (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v')
+		str++;
+	if (*str == '\r' || *str == '\f')
 		str++;
 	if (*str == '-')
 	{
