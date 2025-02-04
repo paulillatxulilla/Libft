@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:16:55 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 15:55:14 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 19:32:30 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,12 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		len;
 
+	if (n == -2147483648)
+	{
+		str = (char *)malloc(12);
+		ft_strlcpy(str, "-2147483648", 12);
+		return (str);
+	}
 	len = count_digits(n);
 	str = (char *)malloc(len + 1);
 	if (!str)

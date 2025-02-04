@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 15:39:39 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:35:25 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 19:23:24 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	c1 = (const unsigned char *)s1;
 	c2 = (const unsigned char *)s2;
-	while (i < n && *c1 != '\0' && (*c1 == *c2))
+	while (i < n && (*c1 == *c2))
 	{
 		c1++;
 		c2++;

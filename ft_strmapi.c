@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 17:32:11 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 17:40:20 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:55:06 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t			len;
-	unsigned int	i;
 	char			*result;
+	unsigned int	i;
 
-	result = (char *)malloc;
-	i = 0;
-	len = ft_strlen(s);
 	if (s == NULL || f == NULL)
 		return (NULL);
+	len = strlen(s);
+	result = (char *)malloc(len + 1);
 	if (result == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
-		i++;
 		result[i] = f(i, s[i]);
+		i++;
 	}
 	result[len] = '\0';
 	return (result);

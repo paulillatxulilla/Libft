@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:55:07 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 17:43:24 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 18:02:51 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	slen;
 	size_t	sublen;
 
-	subs = 0;
-	slen = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
-	if (subs == NULL)
-		return (NULL);
+	slen = ft_strlen(s);
 	if (start >= slen)
-		return ("");
+		return (ft_strdup(""));
 	if (len > slen - start)
 		sublen = slen - start;
 	else
 		sublen = len;
 	subs = (char *)malloc(sublen + 1);
+	if (subs == NULL)
+		return (NULL);
 	ft_strncpy(subs, &s[start], sublen);
 	subs[sublen] = '\0';
 	return (subs);

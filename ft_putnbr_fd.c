@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:50:11 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 16:09:47 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 18:28:50 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	ft_putchar_fd(char c, int fd)
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
+	{
 		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);

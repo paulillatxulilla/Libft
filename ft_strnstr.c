@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:58:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 20:20:33 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 20:06:29 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,32 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	litlen;
-	size_t	i;
+	size_t			litlen;
+	size_t			i;
 
-	i = 0;
 	litlen = ft_strlen(little);
+	if (len < 0)
+		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
-	if (litlen > len)
+	if (litlen > len || big == NULL)
 		return (NULL);
-	while (i <= len - litlen)
+	i = 0;
+	while (big[i] && i <= len - litlen)
 	{
-		i++;
 		if (big[i] == little[0])
 			if (ft_strncmp (&big[i], little, litlen) == 0)
 				return ((char *)&big[i]);
+		i++;
 	}
 	return (NULL);
 }
 /*
 int main ()
 {
-    const char *largestring = "odio 42!";
-    const char *smallstring = "42!";
-    size_t limit = 12;
+    const char *largestring = "lorem ipsum dolor sit amet";
+    const char *smallstring = "lorem";
+    size_t limit = 15;
 
     char *result = ft_strnstr(largestring, smallstring, limit);
 

@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:32:57 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 17:37:28 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 18:10:30 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	char	*dest;
 
-	dest = (char *)malloc;
 	len = ft_strlen(s) + 1;
+	dest = (char *)malloc(len);
 	if (dest == NULL)
 		return (NULL);
 	ft_memcpy(dest, s, len);

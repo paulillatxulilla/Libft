@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 12:41:18 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 21:09:36 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/04 18:12:37 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len1;
 	size_t	len2;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	s3 = (char *)malloc (len1 + len2 + 1);
-	if (s1 == NULL || s2 == NULL || s3 == NULL)
+	if (s3 == NULL)
 		return (NULL);
-	ft_strlcpy(s3, s1, len1);
-	ft_strlcat (s3, s2, len2);
+	ft_strlcpy(s3, s1, len1 + len2 + 1);
+	ft_strlcat (s3, s2, len1 + len2 + 1);
 	return (s3);
 }
 /*

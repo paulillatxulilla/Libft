@@ -6,7 +6,7 @@
 #    By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/02 20:28:44 by padan-pe          #+#    #+#              #
-#    Updated: 2025/02/03 17:46:10 by padan-pe         ###   ########.fr        #
+#    Updated: 2025/02/04 17:30:05 by padan-pe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJ_FILES)
 clean: #regla para limpiar archivos .o
 	rm -f $(OBJ_FILES)
 fclean: #regla para limpiar todo incluyendo la lib
-	rm -f $(NAME)
+	rm -f $(NAME) $(OBJ_FILES)
 
 re: fclean all #recompilar desde 0
 
