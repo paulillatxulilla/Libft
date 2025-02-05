@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:57:26 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/05 18:58:10 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char		*box;
 	unsigned char			*box2;
-	size_t					i;
 
-	i = 0;
 	box = (const unsigned char *)src;
 	box2 = (unsigned char *) dest;
 	if (box2 > box && box < box2 + n)
@@ -32,13 +30,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
-	{
-		while (i < n)
-		{
-			box2[i] = box[i];
-			i++;
-		}
-	}
+		ft_memcpy(dest, src, n);
 	return (dest);
 }
 /*

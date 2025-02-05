@@ -1,43 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/05 17:28:29 by padan-pe         ###   ########.fr       */
+/*   Created: 2025/02/05 16:24:37 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/02/05 17:04:01 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	const unsigned char		*box;
-	unsigned char			*box2;
-	size_t					i;
+	t_list	*new_node;
 
-	i = 0;
-	box = (const unsigned char *)src;
-	box2 = (unsigned char *) dest;
-	if (box2 == NULL && box == NULL)
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	while (i < n)
-	{
-		box2[i] = box[i];
-		i++;
-	}
-	return (dest);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
 /*
-int main(void)
+int	main (void)
 {
-    char arr[] = "abcdefghi";
-    char arrc[7];
-    ft_memcpy(arrc, arr, 5);
-    printf("string copiada: %s\n", arrc);
-    return(0);
-}*/
+	int dato = 'a';
+	t_list *nodo = ft_lstnew(&dato);
+	
+	printf("contenido del nodo: %c", *(char *)nodo->content);
+	free(nodo);
+	return (0);
+}
+*/
