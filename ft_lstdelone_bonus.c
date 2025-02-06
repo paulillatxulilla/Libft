@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 17:10:47 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 17:11:08 by padan-pe         ###   ########.fr       */
+/*   Created: 2025/02/06 16:55:48 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/02/06 18:13:23 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void    ft_lstiter(t_list *lst, void (*f)(void *)) //aplica la funcion f al content de cada nodo
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    while (lst)
-    {
-        f(lst->content);
-        lst = lst->next;
-    }
+	while (lst)
+	{
+		if (del)
+			del(lst->content);
+		free(lst);
+	}
 }

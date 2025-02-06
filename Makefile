@@ -6,7 +6,7 @@
 #    By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/02 20:28:44 by padan-pe          #+#    #+#              #
-#    Updated: 2025/02/06 18:02:56 by padan-pe         ###   ########.fr        #
+#    Updated: 2025/02/06 18:26:10 by padan-pe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC_FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_
 OBJ_FILES = $(SRC_FILES:%.c=%.o)
 BONUS_DIR = bonus
 BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-BONUS_OBJ_FILES = $(BONUS_FILES:.c=$(BONUS_DIR)/%.o)
+BONUS_OBJ_FILES = $(BONUS_FILES%.c=$(BONUS_DIR)/%.o)
 
 all: $(NAME)
 
@@ -28,15 +28,15 @@ $(NAME): $(OBJ_FILES)
 %.o: %.c #regla para compilar archivos c en .o
 	$(CC) $(CC_FLAGS) $(INCLUDE) -c $< -o $@
 
-$(BONUS_DIR)/%.o=$(BONUS_DIR)/%.c #regla para compilar bonus
+$(BONUS_DIR)/%.o: $(BONUS_DIR)/%.c #regla para compilar bonus
 	$(CC) $(CC_FLAGS) $(INCLUDE) -c $< -o $@
 	
 bonus: $(BONUS_OBJ_FILES) #añadir bonus a la librería
 	ar rcs $(NAME) $(BONUS_OBJ_FILES)
 clean: #regla para limpiar archivos .o
-	rm -f $(OBJ_FILES)
+	rm -f $(OBJ_FILES) $(BONUS_OBJ_FILES)
 fclean: #regla para limpiar todo incluyendo la lib
-	rm -f $(NAME) $(OBJ_FILES)
+	rm -f $(NAME) $(OBJ_FILES) $(BONUS_OBJ_FILES)
 
 re: fclean all #recompilar desde 0
 
