@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 17:43:35 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/05 19:04:38 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/05 19:11:52 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,18 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+/*t_list	*ft_lstnew(void *content)
+{
+	t_list	*new_node;
+
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
+
 int	main ()
 {
 	t_list *node1 = ft_lstnew("Nodo 1");
@@ -41,4 +53,4 @@ int	main ()
     free(node2);
     free(node3);
 	return (0);
-}
+}*/

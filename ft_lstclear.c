@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/05 19:10:51 by padan-pe         ###   ########.fr       */
+/*   Created: 2025/02/06 17:07:23 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/02/06 17:07:43 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+void    ft_lstclear(t_list **lst, void (*del)(void*)) //elimina y libera mem de nodo lst
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+    t_list  *temp;
+
+    if (!lst || !del)
+        return ;
+    while (*lst)
+    {
+        temp = (*lst)->next;
+        del((*lst)->content);
+        free(*lst);
+        *lst = temp;
+    }
+    *lst = NULL;
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    printf("%d",ft_isascii('.'));
-    return(0);
-}
-*/

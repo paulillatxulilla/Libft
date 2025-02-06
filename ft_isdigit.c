@@ -6,11 +6,10 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:35:09 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/05 19:10:57 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isdigit(int c)
@@ -20,7 +19,8 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*
+/*#include <stdio.h>
+
 int main(void)
 {
     printf("%d",ft_isdigit('4'));

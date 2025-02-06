@@ -6,12 +6,10 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:10:09 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/04 19:13:41 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/05 19:10:08 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
 
 static int	is_space(char c)
