@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/04 18:17:58 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:54:31 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	count;
 	int	in_word;
@@ -36,7 +36,7 @@ int	count_words(const char *s, char c)
 	return (count);
 }
 
-char	*allocate_word(const char *s, int start, int len)
+static char	*allocate_word(const char *s, int start, int len)
 {
 	char	*word;
 
@@ -48,7 +48,7 @@ char	*allocate_word(const char *s, int start, int len)
 	return (word);
 }
 
-char	**process_words(const char *s, char c, char **result)
+static char	**process_words(const char *s, char c, char **result)
 {
 	int	i;
 	int	start;

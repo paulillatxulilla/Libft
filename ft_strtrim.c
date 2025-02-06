@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 16:17:17 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 21:14:23 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:55:59 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 
 	start = 0;
-	end = strlen(s1);
+	end = ft_strlen(s1);
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	while (s1[start] && ft_isinset(s1[start], set))
