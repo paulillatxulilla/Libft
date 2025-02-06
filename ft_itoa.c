@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:16:55 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/04 19:32:30 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/06 19:34:12 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 	{
 		str = (char *)malloc(12);
+		if (!str)
+			return (NULL);
 		ft_strlcpy(str, "-2147483648", 12);
 		return (str);
 	}
