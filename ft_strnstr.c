@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:58:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 18:07:45 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/10 16:32:31 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t			litlen;
-	size_t			biglen;
 	size_t			i;
 
 	litlen = ft_strlen(little);
-	biglen = ft_strlen(big);
-	if (len < 0 && (!big || !little))
+	ft_strlen(big);
+	if (!big || !little)
 		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
