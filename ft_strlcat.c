@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/02 19:36:29 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:47:50 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dlen + i] = '\0';
 	return (dlen + slen);
 }
-/*
+
 int main(void)
 {
     char dest[12] = "Hola ";
@@ -45,4 +45,4 @@ int main(void)
     ft_strlcat(dest, src, 40);
     printf("strings concatenadas (primero dest, luego src): %s\n", dest);
     return(0);
-}*/
+}

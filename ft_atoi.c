@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:10:09 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/05 19:10:08 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:47:22 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,20 +52,23 @@ int	ft_atoi(const char	*str)
 	}
 	return (result * sign);
 }
-/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
 int main() 
 {
-    char str1[] = "   -12345";
-    char str2[] = "42";
+    char str1[] = "1234567890128762";
+   /*  char str2[] = "42";
     char str3[] = "  +987";
     char str4[] = "abc123";
-    char str5[] = "123abc";
+    char str5[] = "123abc"; */
 
-    printf("Cadena: '%s', Entero: %d\n", str1, ft_atoi(str1));
-    printf("Cadena: '%s', Entero: %d\n", str2, ft_atoi(str2));
+    printf("Cadena: '%s', Entero: %d\n", str1, atoi(str1));
+  /*   printf("Cadena: '%s', Entero: %d\n", str2, ft_atoi(str2));
     printf("Cadena: '%s', Entero: %d\n", str3, ft_atoi(str3));
     printf("Cadena: '%s', Entero: %d\n", str4, ft_atoi(str4));
-    printf("Cadena: '%s', Entero: %d\n", str5, ft_atoi(str5));
+    printf("Cadena: '%s', Entero: %d\n", str5, ft_atoi(str5)); */
 
     return 0;
-}*/
+}

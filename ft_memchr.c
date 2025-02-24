@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:18:57 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 18:08:56 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:41:16 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
+
 int main ()
 {
     const void *s = "bonjour";
-    int c = 'b';
+    int c = 'j';
     size_t n = 4;
     void *result = ft_memchr(s, c, n);
 
@@ -46,4 +46,3 @@ int main ()
         printf("no encontrado :(");
     return (0);
 }
-*/

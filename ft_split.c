@@ -6,7 +6,7 @@
 /*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 19:31:36 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/02/10 19:04:18 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,10 @@ char	**ft_split(char const *s, char c)
 		str[z] = NULL;
 	return (str);
 }
-/*
+
 int main()
 {
-    char **result = ft_split("hola,cara,cola", ',');
+    char **result = ft_split("hola,c ara,cola", ' ');
     if (!result)
     {
         printf("Error al asignar memoria\n");
@@ -97,4 +97,4 @@ int main()
     }
     free(result);  // Se libera el array de punteros
     return 0;
-}*/
+}
