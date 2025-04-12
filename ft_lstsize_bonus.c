@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 17:43:35 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 18:41:44 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/04/12 15:36:07 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)

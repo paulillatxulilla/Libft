@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 17:07:23 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:29 by paula            ###   ########.fr       */
+/*   Created: 2025/02/16 18:37:43 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/04/10 23:43:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+int	ft_puthex(size_t x, char *base)//%x%X
 {
-	t_list	*temp;
+	int		count;
 
-	if (!lst || !del)
-		return ;
-	while (*lst)
-	{
-		temp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = temp;
-	}
-	*lst = NULL;
+	count = 0;
+	if (x >= 16)
+		count = count + ft_puthex(x / 16, base);
+	count = count + ft_putchar(base[x % 16]);
+	return (count);
 }

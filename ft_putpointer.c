@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 16:24:37 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:10 by paula            ###   ########.fr       */
+/*   Created: 2025/02/18 15:33:40 by padan-pe          #+#    #+#             */
+/*   Updated: 2025/04/12 15:34:41 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_putpointer(void *p)//%p
 {
-	t_list	*new_node;
+	int	count;
 
-	new_node = (t_list *)malloc(sizeof(t_list));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
+	count = 0;
+	if (!p)
+		return (write (1, "(nil)", 5));
+	count = count + ft_putstr("0x");
+	count = count + ft_puthex((unsigned long)p, "0123456789abcdef");
+	return (count);
 }
-/*
-int	main (void)
-{
-	int dato = 'a';
-	t_list *nodo = ft_lstnew(&dato);
-	
-	printf("contenido del nodo: %c", *(char *)nodo->content);
-	free(nodo);
-	return (0);
-}
-*/

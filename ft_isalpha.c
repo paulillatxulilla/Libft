@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/05 19:10:38 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/04/12 15:37:01 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-/*
+/* 
 int main(void)
 {
-    printf("%d",ft_isalpha('a'));
+    printf("%d\n",ft_isalpha('a'));
     return(0);
-}
-*/
+} */

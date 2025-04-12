@@ -3,17 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 19:17:46 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 18:50:20 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/04/12 15:35:41 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
 # include <stddef.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
 
 int		ft_atoi(const char	*str);
 void	ft_bzero(void *s, size_t n);
@@ -63,4 +71,20 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+int		ft_printf(char const *str, ...);
+int		ft_percent(va_list args, char str);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putpointer(void *p);
+int		ft_putnbr(int i);
+int		ft_putunsigned(unsigned int u);
+int		ft_puthex(size_t x, char *base);
+char	*ft_readbuffer(int fd, char *b);
+char	*get_next_line(int fd);
+int		ft_untiln(const char *s);
+size_t	gnl_ft_strlen(const char *s);
+char	*gnl_ft_strchr(const char *s, int c);
+char	*gnl_ft_strjoin(char *s1, char *s2);
+char	*gnl_ft_strncpy(char *dest, const char *src, size_t dsize);
+char	*gnl_ft_substr(char const *s, unsigned int start, size_t len);
 #endif

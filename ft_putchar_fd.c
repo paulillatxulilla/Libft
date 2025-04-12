@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:49:36 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/03 16:05:54 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/04/12 15:35:10 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <fcntl.h>
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

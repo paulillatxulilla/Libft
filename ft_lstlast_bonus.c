@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 16:21:59 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/02/06 18:41:57 by padan-pe         ###   ########.fr       */
+/*   Updated: 2025/04/12 15:36:18 by paula            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
