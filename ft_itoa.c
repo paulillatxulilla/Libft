@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:16:55 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:45 by paula            ###   ########.fr       */
+/*   Updated: 2025/04/23 18:13:33 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	return (str);
 }
-
+/* 
 int main()
 {
     int number = -123;  
@@ -83,4 +83,4 @@ int main()
     else 
         printf("Error al asignar memoria.\n");
     return 0;
-}
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 16:18:57 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:03 by paula            ###   ########.fr       */
+/*   Updated: 2025/04/23 18:13:42 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/* 
 int main ()
 {
     const void *s = "bonjour";
@@ -44,3 +44,4 @@ int main ()
         printf("no encontrado :(");
     return (0);
 }
+ */

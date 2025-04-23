@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 13:13:56 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:34:28 by paula            ###   ########.fr       */
+/*   Updated: 2025/04/23 18:13:57 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 		str[z] = NULL;
 	return (str);
 }
-
+/* 
 int main()
 {
     char **result = ft_split("hola,c ara,cola", ' ');
@@ -94,4 +94,4 @@ int main()
     }
     free(result);  // Se libera el array de punteros
     return 0;
-}
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:45:30 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:34:04 by paula            ###   ########.fr       */
+/*   Updated: 2025/04/23 18:14:08 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
+/* 
 int main(void)
 {
     char dest[12] = "Hola ";
@@ -44,3 +44,4 @@ int main(void)
     printf("strings concatenadas (primero dest, luego src): %s\n", dest);
     return(0);
 }
+ */
