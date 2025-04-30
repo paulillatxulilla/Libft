@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paula <paula@student.42.fr>                +#+  +:+       +#+        */
+/*   By: padan-pe <padan-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:57:24 by padan-pe          #+#    #+#             */
-/*   Updated: 2025/04/12 15:36:13 by paula            ###   ########.fr       */
+/*   Updated: 2025/04/30 17:50:05 by padan-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, int (*f)(int), void (*del)(int))
 {
 	t_list	*new_list;
 	t_list	*new_node;
-	void	*new_content;
+	int		new_content;
 
 	new_list = NULL;
 	while (lst)
